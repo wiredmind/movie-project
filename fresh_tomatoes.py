@@ -53,6 +53,10 @@ main_page_head = '''
             top: 0;
             background-color: white;
         }
+        .tmdb-logo {
+            height: auto;
+            width: 150px;
+        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -112,6 +116,15 @@ main_page_content = '''
     </div>
     <div class="container">
       {movie_tiles}
+    </div>
+    <div class="container">
+        <footer class="text-center">
+            <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+            <a href="http://www.themoviedb.org/" title="TMDb">
+                <img class="tmdb-logo"
+                src="https://d3a8mw37cqal2z.cloudfront.net/images/logos/var_4_0_tmdb-logo-1Line-Blk-Bree.svg">
+            </a>
+        </footer>
     </div>
   </body>
 </html>
