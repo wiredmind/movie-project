@@ -35,6 +35,13 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            transition: all 1s ease
+        }
+        .movie-tile p {
+            width:350px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .movie-tile:hover {
             background-color: #EEE;
@@ -136,7 +143,7 @@ movie_tile_content = '''
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
     <p>{tagline}</p>
-    <p>{release_date}</p>
+    <p>Release Date: {release_date}</p>
 </div>
 '''
 
@@ -148,7 +155,9 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=movie.trailer_youtube_id
+            trailer_youtube_id=movie.trailer_youtube_id,
+            tagline=movie.tagline,
+            release_date=movie.release_date
         )
     return content
 

@@ -54,5 +54,8 @@ class movie(object):
         self.poster_image_url = IMAGE_BASE_URL + movie['poster_path']
         self.trailer_youtube_id = movie['videos']['results'][0]['key']
         self.release_date = movie['release_date']
-        self.tagline = movie['tagline']
+
+        # There have been instances with improper unicode data, so the tagline
+        # gets explicitly encoded with invalid charcters ignored
+        self.tagline = movie['tagline'].encode('ascii', 'ignore')
 
