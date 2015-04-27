@@ -1,1 +1,7 @@
-tinydb==2.2.2
+configparser==3.5.0b2
+env-tools==2.0.0
+requests==2.5.3
+six==1.9.0
+tini==3.0.0
+tmdbsimple==1.3.0
+ujson==1.33
