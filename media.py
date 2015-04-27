@@ -36,6 +36,10 @@ class movie(object):
         u'https://image.tmdb.org/t/p/w780/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg'
         >>> the_matrix.trailer_youtube_id
         u'533ec655c3a368544800047b'
+        >>> the_matrix.release_date
+        u'1999-03-30'
+        >>> the_matrix.tagline
+        u'Welcome to the Real World.'
     """
 
     def __init__(self, id):
@@ -49,4 +53,6 @@ class movie(object):
         self.title = movie['title']
         self.poster_image_url = IMAGE_BASE_URL + movie['poster_path']
         self.trailer_youtube_id = movie['videos']['results'][0]['key']
+        self.release_date = movie['release_date']
+        self.tagline = movie['tagline']
 
