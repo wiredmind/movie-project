@@ -4,7 +4,7 @@ env-tools==2.0.0
 jedi==0.8.1
 prompt-toolkit==0.34
 ptpython==0.8
-Pygments==2.0.2
+Pygments==2.7.4
 requests==2.5.3
 six==1.9.0
 tini==3.0.0
